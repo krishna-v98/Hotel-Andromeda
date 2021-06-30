@@ -2,8 +2,8 @@
   padding: 13rem 10rem;
   background-image: linear-gradient(
       to right bottom,
-      rgba(white, 0.3),
-      rgba(black, 0.3)
+      rgba(white, 0.5),
+      rgba(black, 0.6)
     ),
     url("../img/location-bg.jpg");
   background-position: center;
@@ -13,10 +13,36 @@
   &__ping-icon {
     height: 10rem;
     width: 10rem;
-    fill: rgb(168, 0, 0);
+    fill: rgba(185, 0, 0, 0.651);
     position: absolute;
     top: 40%;
     left: 14%;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+
+  &__ping-icon:hover {
+    transform: translateY(-0.8rem) scale(1.1);
+  }
+
+  &__tooltip {
+    color: white;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    padding: 1.3rem 2rem;
+    font-size: 1.5rem;
+    top: 30%;
+    left: 10%;
+
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  .hover-dummy:hover + &__tooltip {
+    top: 28%;
+    opacity: 1;
   }
 
   &__text {
@@ -31,7 +57,7 @@
 
     &__heading {
       font-size: 5rem;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
 
       & span {
         font-weight: 600;
