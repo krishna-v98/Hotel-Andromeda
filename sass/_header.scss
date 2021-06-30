@@ -1,38 +1,46 @@
 .header {
   // height: 50rem;
   background-image: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-primary-light)
-  );
-  padding: 7rem;
+      to right bottom,
+      rgba($color-primary, 0.6),
+      rgba($color-primary-light, 0.6)
+    ),
+    url("../img/header-bg.jfif");
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 7rem 7rem 12rem;
   display: flex;
   align-items: center;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 
   &__name {
-    width: 65%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 10rem;
+
+    &__mainheading {
+      font-size: 7.5rem;
+      color: white;
+      font-weight: 100;
+      margin-bottom: 2rem;
+    }
+
+    &__subheading {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--color-subtext);
+      text-align: right;
+      padding-right: 6rem;
+    }
   }
 
-  &__name > h1 {
-    font-size: 7.5rem;
-    color: white;
-    font-weight: 100;
-    margin-bottom: 2rem;
-  }
-
-  &__name > p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: rgb(235, 235, 235);
-    text-align: right;
-    padding-right: 3rem;
-  }
+  // ----------COMPOSITION----------
 
   &__hotel-photos-comp {
     margin-right: 5rem;
@@ -51,6 +59,7 @@
       &--2,
       &--3 {
         position: absolute;
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
       }
 
       &--1 {
@@ -77,6 +86,10 @@
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
       // border: 2px solid white;
     }
+
+    &:hover &__img:not(:hover) {
+      transform: scale(0.9);
+    }
   }
 
   &__blur-bars {
@@ -91,12 +104,12 @@
       border-radius: 20px;
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
       margin-bottom: 6rem;
-      transform: translateY(100%) translateX(70%) rotate(35deg);
+      transform: translateY(100%) translateX(80%) rotate(35deg);
       transition: all 0.2s;
     }
 
     &__bar:hover {
-      transform: translateY(100%) translateX(70%) rotate(35deg) scale(1.1);
+      transform: translateY(100%) translateX(80%) rotate(35deg) scale(1.1);
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
     }
   }

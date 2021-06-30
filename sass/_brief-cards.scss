@@ -1,0 +1,14 @@
+.brief-cards {
+  height: 75vh;
+  padding: 10rem 18rem;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.7),
+      rgba($color-primary-light, 0.7)
+    ),
+    url("../img/cards-bg.jfif");
+  background-size: cover;
+  background-position: center;
+}

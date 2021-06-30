@@ -1,6 +1,7 @@
 :root {
   --color-primary: #186dad;
-  --color-primary-light: #53b5fa; }
+  --color-primary-light: #53b5fa;
+  --color-subtext: rgb(228, 228, 228); }
 
 * {
   margin: 0;
@@ -17,29 +18,34 @@ html {
   box-sizing: inherit; }
 
 .header {
-  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
-  padding: 7rem;
+  background-image: linear-gradient(to right bottom, rgba(24, 109, 173, 0.6), rgba(83, 181, 250, 0.6)), url("../img/header-bg.jfif");
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 7rem 7rem 12rem;
   display: flex;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100vh; }
   .header__name {
-    width: 65%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 10rem; }
-  .header__name > h1 {
-    font-size: 7.5rem;
-    color: white;
-    font-weight: 100;
-    margin-bottom: 2rem; }
-  .header__name > p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: #ebebeb;
-    text-align: right;
-    padding-right: 3rem; }
+    .header__name__mainheading {
+      font-size: 7.5rem;
+      color: white;
+      font-weight: 100;
+      margin-bottom: 2rem; }
+    .header__name__subheading {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--color-subtext);
+      text-align: right;
+      padding-right: 6rem; }
   .header__hotel-photos-comp {
     margin-right: 5rem;
     width: 49rem;
@@ -52,7 +58,8 @@ html {
       transition: all 0.3s;
       object-fit: cover; }
       .header__hotel-photos-comp__img--1, .header__hotel-photos-comp__img--2, .header__hotel-photos-comp__img--3 {
-        position: absolute; }
+        position: absolute;
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4); }
       .header__hotel-photos-comp__img--1 {
         top: 0;
         left: 0; }
@@ -68,6 +75,8 @@ html {
       transform: scale(1.2);
       z-index: 3;
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4); }
+    .header__hotel-photos-comp:hover .header__hotel-photos-comp__img:not(:hover) {
+      transform: scale(0.9); }
   .header__blur-bars {
     width: 30%;
     display: flex;
@@ -79,8 +88,80 @@ html {
       border-radius: 20px;
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
       margin-bottom: 6rem;
-      transform: translateY(100%) translateX(70%) rotate(35deg);
+      transform: translateY(100%) translateX(80%) rotate(35deg);
       transition: all 0.2s; }
     .header__blur-bars__bar:hover {
-      transform: translateY(100%) translateX(70%) rotate(35deg) scale(1.1);
+      transform: translateY(100%) translateX(80%) rotate(35deg) scale(1.1);
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); }
+
+.card {
+  width: 22%;
+  border-radius: 5px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/card napkin.jfif");
+  color: white;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s; }
+  .card__image {
+    font-weight: 100;
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 3rem; }
+  .card__heading {
+    margin-bottom: 3rem;
+    font-size: 1.5rem; }
+  .card__content {
+    color: #e4e4e4;
+    font-size: 1.3rem; }
+  .card:hover {
+    transform: translateY(-0.8rem) scale(1.08); }
+
+.circle-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 36rem;
+  transform: rotate(-45deg) translateX(-9rem) translateY(-11rem); }
+  .circle-grid__circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--color-primary), #0f7dcc);
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem; }
+
+.beach-view {
+  background-image: url("../img/experience_bg.jfif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex; }
+  .beach-view__blend {
+    width: 45%;
+    padding: 18rem 8rem;
+    background-color: rgba(24, 109, 173, 0.35); }
+    .beach-view__blend__text {
+      font-size: 6rem;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      margin-bottom: 7rem; }
+    .beach-view__blend__subtext {
+      color: var(--color-subtext);
+      font-family: "Montserrat", sans-serif;
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+      font-weight: 500; }
+
+.brief-cards {
+  height: 75vh;
+  padding: 10rem 18rem;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right bottom, rgba(24, 109, 173, 0.7), rgba(83, 181, 250, 0.7)), url("../img/cards-bg.jfif");
+  background-size: cover;
+  background-position: center; }

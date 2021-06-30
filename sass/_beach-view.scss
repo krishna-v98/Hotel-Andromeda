@@ -1,0 +1,28 @@
+.beach-view {
+  background-image: url("../img/experience_bg.jfif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+
+  &__blend {
+    width: 45%;
+    padding: 18rem 8rem;
+    background-color: rgba($color-primary, 0.35);
+
+    &__text {
+      font-size: 6rem;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      margin-bottom: 7rem;
+    }
+
+    &__subtext {
+      color: var(--color-subtext);
+      font-family: "Montserrat", sans-serif;
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+}
