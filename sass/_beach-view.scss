@@ -2,12 +2,12 @@
   background-image: url("../img/experience_bg.jfif");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+
   display: flex;
 
   &__blend {
     width: 45%;
-    padding: 18rem 8rem;
+    padding: 15rem 8rem;
     background-color: rgba($color-primary, 0.35);
 
     &__text {
