@@ -187,7 +187,7 @@ a {
   .location__ping-icon:hover {
     transform: translateY(-0.8rem) scale(1.1); }
   .location__tooltip {
-    color: white;
+    color: black;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
