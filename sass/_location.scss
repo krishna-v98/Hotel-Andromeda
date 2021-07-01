@@ -59,9 +59,14 @@
       font-size: 5rem;
       margin-bottom: 4rem;
 
-      & span {
+      &__city {
         font-weight: 600;
         font-style: italic;
+      }
+
+      &__country {
+        font-style: italic;
+        font-size: 1.8rem;
       }
     }
 

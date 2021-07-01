@@ -117,7 +117,9 @@ a {
     font-size: 1.5rem; }
   .card__content {
     color: #e4e4e4;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    text-align: justify; }
   .card:hover {
     transform: translateY(-0.8rem) scale(1.08); }
 
@@ -211,9 +213,12 @@ a {
     .location__text__heading {
       font-size: 5rem;
       margin-bottom: 4rem; }
-      .location__text__heading span {
+      .location__text__heading__city {
         font-weight: 600;
         font-style: italic; }
+      .location__text__heading__country {
+        font-style: italic;
+        font-size: 1.8rem; }
     .location__text__subheading {
       color: var(--color-subtext);
       font-size: 1.6rem;
